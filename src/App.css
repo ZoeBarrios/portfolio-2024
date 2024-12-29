@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@800&family=Edu+AU+VIC+WA+NT+Pre:wght@800&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Edu+AU+VIC+WA+NT+Pre:wght@700&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #f5f5f5;
+  cursor: url('/pen.ico'), auto;
+}
+
+
+.bg_container {
+  position: relative;
+}
+
+#window_bg {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: relative;
+}
+
+#paisaje {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  #window_bg,
+  #paisaje {
+    padding: 1rem;
+  }
+
+}
+
+/*ESTILOS BARRA DE LATERAL*/
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(239, 236, 232);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(186, 186, 186);
+  border-radius: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}

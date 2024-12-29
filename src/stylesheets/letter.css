@@ -1,0 +1,38 @@
+.letter-container {
+    animation: float 3s ease-in-out infinite;
+}
+
+.letter-text {
+    font-size: 6rem;
+    font-weight: 300;
+
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.color-day {
+    background: linear-gradient(to right, #ececec, #d3d6db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    ;
+}
+
+.color-night {
+    background: linear-gradient(to right, #BDE4F4, #fafafa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    ;
+}
+
+/* Animación de flotación */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

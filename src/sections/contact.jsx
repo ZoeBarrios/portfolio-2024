@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import outlook from '/outlook.png';
 import Form from '../components/form';
-import Modal from '../components/Modal';
+import Modal from '../components/modal';
 
 export default function Contact() {
     const [show, setShow] = useState(false);

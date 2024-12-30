@@ -24,7 +24,7 @@ export default function Modal({ children, open, onClose }) {
             style={{ zIndex: 1000 }}
         >
             <div
-                className={`mx-10 bg-white border rounded shadow-lg transition-all duration-500 transform ${open ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
+                className={`m-10 bg-white border rounded shadow-lg transition-all duration-500 transform ${open ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
                     }`}
                 style={{
                     fontFamily: 'system-ui',

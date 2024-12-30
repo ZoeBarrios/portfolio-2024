@@ -39,7 +39,7 @@ function Header() {
 
 
             <nav
-                className={`${menuOpen ? "block" : "hidden"} sm:flex sm:flex-row sm:items-start items-center gap-16 absolute sm:static top-20 left-0 sm:top-0 w-full sm:w-auto ${theme === "day" ? "bg-day_bg_main" : "bg-night_bg_main"} sm:bg-transparent p-4 sm:p-0`}
+                className={`${menuOpen ? "block" : "hidden"} sm:flex sm:flex-row sm:items-start items-center gap-16 absolute sm:static top-20 left-0 sm:top-0 w-full sm:w-auto ${bg_color_deg} sm:bg-transparent p-4 sm:p-0`}
             >
                 <ul className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
                     <li>

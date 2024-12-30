@@ -31,9 +31,9 @@ export default function Comments() {
 
     return (
         <div className={`flex flex-col justify-center items-center h-screen p-2 ${bg_color_deg}`}>
-            <div className="flex flex-row justify-between w-full self-start h-10">
+            <div className="mb-10 md:mb-0 flex flex-row justify-between w-full self-start h-10">
                 <div>
-                    <Link href="/" className={`font-bold py-2 px-4 rounded flex items-center ${theme === "day" ? 'bg-slate-400 hover:bg-slate-600 text-white' : 'bg-gray-300 hover:bg-gray-400 text-white'}`}>
+                    <Link href="/" className={`font-bold py-2 px-4 rounded flex items-center z-10 ${theme === "day" ? 'bg-slate-400 hover:bg-slate-600 text-white' : 'bg-gray-300 hover:bg-gray-400 text-white'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>

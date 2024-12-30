@@ -21,7 +21,6 @@ export function sendEmail(e, language) {
     }
   }
 
-  console.log(SERVICE, TEMPLATE_ID, SECRET);
 
   emailjs.sendForm(SERVICE, TEMPLATE_ID, e.target, SECRET).then(
     () => {

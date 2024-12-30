@@ -36,3 +36,9 @@
         transform: translateY(-10px);
     }
 }
+
+@media (max-width: 768px) {
+    .letter-text {
+        font-size: 4rem;
+    }
+}

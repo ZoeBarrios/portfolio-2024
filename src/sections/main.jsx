@@ -11,11 +11,11 @@ function Main() {
     const { language } = useLanguage();
     const { theme } = useTheme();
     return (
-        <section className=" md:p-0 h-screen flex flex-col md:flex-row items-center justify-around" id="home">
+        <section className="p-10 pt-16 md:p-0 h-screen flex flex-col md:flex-row items-center justify-around" id="home">
 
 
             {language === LANGUAGES.ESP ? (
-                <div className="flex flex-row py-10 md:p-0 md:flex-col items-center justify-center">
+                <div className="flex flex-row md:flex-col items-center justify-center">
                     <Letter letter="S" theme={theme} />
                     <Letter letter="o" theme={theme} />
                     <Letter letter="y" theme={theme} />

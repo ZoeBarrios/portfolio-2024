@@ -24,13 +24,15 @@ export default function Modal({ children, open, onClose }) {
             style={{ zIndex: 1000 }}
         >
             <div
-                className={`m-10 bg-white border rounded shadow-lg transition-all duration-500 transform ${open ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
+                className={`mx-10 bg-white border rounded shadow-lg transition-all duration-500 transform ${open ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
                     }`}
                 style={{
                     fontFamily: 'system-ui',
+                    maxHeight: '90%',
                 }}
             >
-                <div className="w-full flex flex-row justify-end">
+                <div className="w-full flex flex-row justify-end"
+                >
                     <button
                         onClick={onClose}
                         className="px-2 mt-2 text-red-600 font-bold"

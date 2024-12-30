@@ -40,7 +40,7 @@ export default function Comments() {
                     </Link>
                 </div>
 
-                <div onClick={() => setShow(true)} className="w-16 mt-2 self-start justify-self-center cursor-pointer">
+                <div onClick={() => setShow(true)} className="w-16 mt-2 self-start justify-self-center cursor-pointer z-10">
                     <img src={Pen} alt="pen" />
                 </div>
             </div>

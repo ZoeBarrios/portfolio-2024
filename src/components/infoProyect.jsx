@@ -9,7 +9,7 @@ export default function InfoProyect({ index }) {
 
     return (
         <div
-            className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full h-[85vh] overflow-y-auto flex flex-col justify-between"
+            className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full h-[80vh] overflow-y-auto flex flex-col justify-between"
             style={{ borderTop: `6px solid ${proyecto.color}` }}
         >
             <div className="flex flex-col items-center mb-6">

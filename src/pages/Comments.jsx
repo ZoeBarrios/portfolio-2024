@@ -58,7 +58,7 @@ export default function Comments() {
             >
                 {show && (
                     <Modal open={show} onClose={closeModal}>
-                        <FormPostIt insert={insert} />
+                        <FormPostIt insert={insert} closeModal={closeModal} />
                     </Modal>
                 )}
 

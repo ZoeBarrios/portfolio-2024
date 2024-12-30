@@ -39,18 +39,49 @@ function Header() {
 
 
             <nav
-                className={`${menuOpen ? "block" : "hidden"} sm:flex sm:flex-row sm:items-start items-center gap-16 absolute sm:static top-20 left-0 sm:top-0 w-full sm:w-auto bg-day_bg_main sm:bg-transparent p-4 sm:p-0`}
+                className={`${menuOpen ? "block" : "hidden"} sm:flex sm:flex-row sm:items-start items-center gap-16 absolute sm:static top-20 left-0 sm:top-0 w-full sm:w-auto ${theme === "day" ? "bg-day_bg_main" : "bg-night_bg_main"} sm:bg-transparent p-4 sm:p-0`}
             >
-                <ul className="flex flex-col sm:flex-row items-center gap-24">
-                    <li><a href="#home">{TRADUCTION[language].NAV.HOME}</a></li>
-                    <li><a href="#about">{TRADUCTION[language].NAV.ABOUT}</a></li>
-                    <li><a href="#projects">{TRADUCTION[language].NAV.PROYECTS}</a></li>
-                    <li><Link href="/comments">{
-                        TRADUCTION[language].NAV.COMMON_PLACE
-                    }</Link></li>
-
+                <ul className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
+                    <li>
+                        <a
+                            href="#home"
+                            className={`relative ${theme === "day" ? "text-day_text_color hover:text-gray-600 " : "text-night_text_color hover:text-blue-200"} transition-all duration-300`}
+                        >
+                            {TRADUCTION[language].NAV.HOME}
+                            <span className={`absolute left-0 bottom-0 w-0 h-1 ${theme === "day" ? "bg-day_bg_2main" : "bg-night_bg_2main"} transition-all duration-300 hover:w-full`}></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#about"
+                            className={`relative ${theme === "day" ? "text-day_text_color hover:text-gray-600 " : "text-night_text_color hover:text-blue-200 "} transition-all duration-300`}
+                        >
+                            {TRADUCTION[language].NAV.ABOUT}
+                            <span className={`absolute left-0 bottom-0 w-0 h-1 ${theme === "day" ? "bg-day_bg_2main" : "bg-night_bg_2main"} transition-all duration-300 hover:w-full`}></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#projects"
+                            className={`relative ${theme === "day" ? "text-day_text_color hover:text-gray-600 " : "text-night_text_color hover:text-blue-200 "} transition-all duration-300`}
+                        >
+                            {TRADUCTION[language].NAV.PROYECTS}
+                            <span className={`absolute left-0 bottom-0 w-0 h-1 ${theme === "day" ? "bg-day_bg_2main" : "bg-night_bg_2main"} transition-all duration-300 hover:w-full`}></span>
+                        </a>
+                    </li>
+                    <li>
+                        <Link
+                            href="/comments"
+                            className={`relative ${theme === "day" ? "text-day_text_color hover:text-gray-600 " : "text-night_text_color hover:text-blue-200 "} transition-all duration-300`}
+                        >
+                            {TRADUCTION[language].NAV.COMMON_PLACE}
+                            <span className={`absolute left-0 bottom-0 w-0 h-1 ${theme === "day" ? "bg-day_bg_2main" : "bg-night_bg_2main"} transition-all duration-300 hover:w-full`}></span>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
+
+
 
             <Toggle />
         </header >

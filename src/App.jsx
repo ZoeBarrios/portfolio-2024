@@ -2,6 +2,7 @@ import './App.css'
 import Routes from './Routes'
 import useTheme from './stores/themeStore';
 import BtnLanguage from './components/btnLanguage';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const { theme } = useTheme();
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className={`font-lato ${bg_color_deg}`}>
+      <ToastContainer />
       <Routes></Routes>
       <BtnLanguage />
     </div>

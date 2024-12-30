@@ -59,6 +59,13 @@ export const TRADUCTION = {
       BUTTONS: {
         ADD: "Add",
       },
+      SUCCESS: "Post-it added successfully!",
+      ERRORS: {
+        USERNAME_REQUIRED: "Username is required",
+        MESSAGE_REQUIRED: "Message is required",
+        SUBMIT_FAILED: "Failed to submit post-it",
+        NOT_FOUND: "User not found",
+      }
     },
     MESSAGES: {
       FORM_ERROR: "All fields are required",
@@ -125,6 +132,13 @@ export const TRADUCTION = {
       BUTTONS: {
         ADD: "Agregar",
       },
+      SUCCESS: "¡Post-it agregado exitosamente!",
+      ERRORS: {
+        USERNAME_REQUIRED: "El nombre de usuario es obligatorio",
+        MESSAGE_REQUIRED: "El mensaje es obligatorio",
+        SUBMIT_FAILED: "Error al agregar el Post-it",
+        NOT_FOUND: "Usuario no encontrado",
+      }
     },
 
     MESSAGES: {

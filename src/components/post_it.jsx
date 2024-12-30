@@ -1,6 +1,6 @@
 import '../stylesheets/post_it.css';
 
-export default function PostIt({ author, body, avatar, key }) {
+export default function PostIt({ author, body, avatar }) {
     const colors = [
         'bg-red-100',
         'bg-yellow-100',
@@ -30,7 +30,6 @@ export default function PostIt({ author, body, avatar, key }) {
 
     return (
         <div
-            key={key}
             className={`post-it p-4 m-3 shadow-lg rounded-lg ${randomColor}`}
             style={{
                 transform: `rotate(${randomRotate}deg)`,

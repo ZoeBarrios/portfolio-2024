@@ -1,26 +1,24 @@
 import { useState } from 'react';
 import { getUser } from '../services/github';
-import { postPostIt, getPostIts } from '../services/postIt';
+import { postPostIt } from '../services/postIt';
+import useLanguage from '../stores/languageStore';
+import { TRADUCTION } from '../utils/language';
 
-const colors = [
-    'bg-red-100',
-    'bg-yellow-100',
-    'bg-green-100',
-    'bg-blue-100',
-    'bg-indigo-100',
-    'bg-purple-100',
-    'bg-pink-100',
-];
 
 export default function usePostsIts() {
     const [postIts, setPostIt] = useState([]);
-
+    const { language } = useLanguage();
 
     const insert = async (comment) => {
         const user = await getUser(comment.author);
 
         if (user.message === 'Not Found') {
-            return alert('Usuario no encontrado');
+            return {
+                status: 404,
+                data: {
+                    message: TRADUCTION[language].POST_IT_FORM.ERRORS.NOT_FOUND || 'Usuario no encontrado',
+                },
+            }
         }
 
         comment.avatar = user.avatar_url;
@@ -29,6 +27,10 @@ export default function usePostsIts() {
         await postPostIt(comment);
 
         setPostIt((prevPostIts) => [...prevPostIts, comment]);
+
+        return {
+            status: 201,
+        };
     }
 
     return { postIts, insert, setPostIt };

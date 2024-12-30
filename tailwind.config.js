@@ -19,6 +19,7 @@ export default {
         'night_text_color': 'white',
         'day_bg_comment': '#ececec',
         'night_bg_comment': '#a2a8d3',
+
       },
 
     },

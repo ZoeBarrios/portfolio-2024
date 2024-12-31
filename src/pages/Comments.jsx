@@ -11,6 +11,7 @@ import { Link } from "wouter";
 export default function Comments() {
     const { theme } = useTheme();
     const [show, setShow] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const bg_color_deg = theme === "day"
         ? 'bg-gradient-to-r from-day_bg_main from-10% to-day_bg_2main text-day_text_color'
@@ -22,8 +23,10 @@ export default function Comments() {
 
     useEffect(() => {
 
+        setLoading(true);
         getPostIts().then((postIts) => {
             setPostIt(postIts);
+            setLoading(false);
         });
     }, [setPostIt]);
 
@@ -62,7 +65,7 @@ export default function Comments() {
                     </Modal>
                 )}
 
-                <ListOfPostIts postIts={postIts} />
+                <ListOfPostIts postIts={postIts} loading={loading} />
             </div>
 
         </div >

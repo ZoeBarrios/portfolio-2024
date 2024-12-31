@@ -9,8 +9,7 @@ export default function Modal({ children, open, onClose }) {
         if (open) {
             setIsVisible(true);
         } else {
-            // Retrasar la eliminación del modal para completar la animación de cierre
-            const timeout = setTimeout(() => setIsVisible(false), 500); // 500ms coincide con `transition-duration`
+            const timeout = setTimeout(() => setIsVisible(false), 500);
             return () => clearTimeout(timeout);
         }
     }, [open]);
@@ -28,7 +27,8 @@ export default function Modal({ children, open, onClose }) {
                     }`}
                 style={{
                     fontFamily: 'system-ui',
-                    maxHeight: '90%',
+
+
                 }}
             >
                 <div className="w-full flex flex-row justify-end"

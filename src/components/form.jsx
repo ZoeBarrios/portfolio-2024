@@ -9,17 +9,17 @@ export default function Form() {
     const { language } = useLanguage();
 
     return (
-        <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center w-full max-w-md mx-auto">
+        <div className="h-[90vh] overflow-y-auto bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center w-full max-w-md mx-auto">
             <ToastContainer />
 
             <form
-                className="space-y-6"
+                className="space-y-6 "
                 onSubmit={(e) => sendEmail(e, language)}
             >
-                <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+                <h2 className="text-2xl font-bold text-gray-800 text-center">
                     {TRADUCTION[language].CONTACT.TITLE}
                 </h2>
-                <p className="text-gray-600 text-center mb-6">
+                <p className="text-gray-600 text-center ">
                     {TRADUCTION[language].CONTACT.DESCRIPTION}
                 </p>
                 <Input
@@ -38,7 +38,7 @@ export default function Form() {
                 <div>
                     <label
                         htmlFor="message"
-                        className="block text-sm font-medium text-gray-700 mb-2"
+                        className="block text-sm font-medium text-gray-700 "
                     >
                         {TRADUCTION[language].LABELS.MESSAGE}
                     </label>

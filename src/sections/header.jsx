@@ -22,10 +22,9 @@ function Header() {
         <header
             className={`w-full fixed flex flex-row items-center justify-between p-3 font-medium text-xl h-20 ${bg_color_deg}`}
             style={{ zIndex: 900 }}
-
         >
             <img
-                src={theme == "day" ? logo_day : logo_nigth}
+                src={theme === "day" ? logo_day : logo_nigth}
                 alt="Logo"
                 className="ml-2 w-8"
             />
@@ -37,9 +36,8 @@ function Header() {
                 &#9776;
             </button>
 
-
             <nav
-                className={`${menuOpen ? "block" : "hidden"} sm:flex sm:flex-row sm:items-start items-center gap-16 absolute sm:static top-20 left-0 sm:top-0 w-full sm:w-auto ${bg_color_deg} sm:bg-transparent p-4 sm:p-0`}
+                className={`${menuOpen ? `${bg_color_deg} block` : "hidden"} sm:flex sm:flex-row sm:items-start items-center gap-16 absolute sm:static top-20 left-0 sm:top-0 w-full sm:w-auto sm:bg-transparent p-4 sm:p-0`}
             >
                 <ul className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
                     <li>
@@ -48,7 +46,7 @@ function Header() {
                             className={`relative ${theme === "day" ? "text-day_text_color hover:text-gray-600 " : "text-night_text_color hover:text-blue-200"} transition-all duration-300`}
                         >
                             {TRADUCTION[language].NAV.HOME}
-                            <span className={`absolute left-0 bottom-0 w-0 h-1 ${theme === "day" ? "bg-day_bg_2main" : "bg-night_bg_2main"} transition-all duration-300 hover:w-full`}></span>
+                            <span className={`absolute left-0 bottom-0 w-0 h-1 transition-all duration-300 hover:w-full`}></span>
                         </a>
                     </li>
                     <li>
@@ -57,7 +55,7 @@ function Header() {
                             className={`relative ${theme === "day" ? "text-day_text_color hover:text-gray-600 " : "text-night_text_color hover:text-blue-200 "} transition-all duration-300`}
                         >
                             {TRADUCTION[language].NAV.ABOUT}
-                            <span className={`absolute left-0 bottom-0 w-0 h-1 ${theme === "day" ? "bg-day_bg_2main" : "bg-night_bg_2main"} transition-all duration-300 hover:w-full`}></span>
+                            <span className={`absolute left-0 bottom-0 w-0 h-1 transition-all duration-300 hover:w-full`}></span>
                         </a>
                     </li>
                     <li>
@@ -66,7 +64,7 @@ function Header() {
                             className={`relative ${theme === "day" ? "text-day_text_color hover:text-gray-600 " : "text-night_text_color hover:text-blue-200 "} transition-all duration-300`}
                         >
                             {TRADUCTION[language].NAV.PROYECTS}
-                            <span className={`absolute left-0 bottom-0 w-0 h-1 ${theme === "day" ? "bg-day_bg_2main" : "bg-night_bg_2main"} transition-all duration-300 hover:w-full`}></span>
+                            <span className={`absolute left-0 bottom-0 w-0 h-1 transition-all duration-300 hover:w-full`}></span>
                         </a>
                     </li>
                     <li>
@@ -75,17 +73,16 @@ function Header() {
                             className={`relative ${theme === "day" ? "text-day_text_color hover:text-gray-600 " : "text-night_text_color hover:text-blue-200 "} transition-all duration-300`}
                         >
                             {TRADUCTION[language].NAV.COMMON_PLACE}
-                            <span className={`absolute left-0 bottom-0 w-0 h-1 ${theme === "day" ? "bg-day_bg_2main" : "bg-night_bg_2main"} transition-all duration-300 hover:w-full`}></span>
+                            <span className={`absolute left-0 bottom-0 w-0 h-1 transition-all duration-300 hover:w-full`}></span>
                         </Link>
                     </li>
                 </ul>
             </nav>
 
-
-
             <Toggle />
-        </header >
+        </header>
     );
 }
 
 export default Header;
+

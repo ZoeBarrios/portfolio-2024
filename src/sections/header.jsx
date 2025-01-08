@@ -23,11 +23,14 @@ function Header() {
             className={`w-full fixed flex flex-row items-center justify-between p-3 font-medium text-xl h-20 ${bg_color_deg}`}
             style={{ zIndex: 900 }}
         >
-            <img
-                src={theme === "day" ? logo_day : logo_nigth}
-                alt="Logo"
-                className="ml-2 w-8"
-            />
+            <a href="#home">
+                <img
+                    src={theme === "day" ? logo_day : logo_nigth}
+                    alt="Logo"
+                    className="ml-2 w-8"
+                />
+            </a>
+
 
             <button
                 className="sm:hidden text-2xl"

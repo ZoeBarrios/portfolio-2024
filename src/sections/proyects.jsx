@@ -21,6 +21,7 @@ export default function Proyects() {
         <div className="w-full h-screen mt-24 relative flex items-center justify-center"
             id="projects" style={{
                 fontFamily: 'system-ui',
+                cursor: 'pointer',
             }}>
             <div
                 className="flex flex-row items-center justify-around relative"

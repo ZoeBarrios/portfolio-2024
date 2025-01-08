@@ -7,7 +7,7 @@ import '../stylesheets/list.css';
 export default function List() {
     const { theme } = useTheme();
     return (
-        <div className="overflow-y-auto relative max-h-[20rem] sm:max-h-[35rem] w-[100%] sm:w-[25rem] lg:w-[40rem] justify-center items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 p-4 custom-scrollbar">
+        <div className="overflow-y-auto relative max-h-[20rem] sm:max-h-[35rem] w-[100%] sm:w-[25rem] lg:w-[40rem] xll:w-[60rem] justify-center items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 p-4 custom-scrollbar xll:mb-24">
 
             {PROYECTOS.map((proyecto, index) => (
                 <Proyect key={index} index={index} icono={proyecto.icono} theme={theme} />

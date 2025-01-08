@@ -12,7 +12,7 @@ export default function Contact() {
 
     return (
         <div className='flex flex-col items-center justify-center'>
-            <img src={outlook} alt="outlook" className='w-16' onClick={handleShow} />
+            <img src={outlook} alt="outlook" className='w-16 xl:w-32' onClick={handleShow} />
             <Modal open={show} onClose={handleShow}>
                 <Form />
             </Modal>

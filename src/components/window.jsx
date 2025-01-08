@@ -12,13 +12,13 @@ function Window() {
     const { language } = useLanguage();
     return (
         <div className='m-0 md:mt-24 flex flex-col items-center justify-center'>
-            <div className='bg_container flex justify-center' >
+            <div className='bg_container flex justify-center xl:h-[70vh]' >
                 <img
                     key="day"
                     src={bg_main}
                     alt="window_bg"
                     id="window_bg"
-                    className="rounded"
+                    className={`rounded ${theme == 'day' ? '' : 'filter brightness-50'}`}
 
                 />
                 {theme == 'day' ? (

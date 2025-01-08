@@ -9,7 +9,7 @@ export default function Form() {
     const { language } = useLanguage();
 
     return (
-        <div className="h-[90vh] overflow-y-auto bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center w-full max-w-md mx-auto">
+        <div className="h-max-[90vh] overflow-y-auto bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center w-full max-w-md mx-auto">
             <ToastContainer />
 
             <form
